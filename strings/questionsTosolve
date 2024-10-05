@@ -1,0 +1,36 @@
+String Manipulation Problems:
+Longest Substring Without Repeating Characters
+Isomorphic Strings
+Valid Anagram
+Count and Say
+Longest Palindromic Substring
+Palindrome Partitioning
+<!-- Group Anagrams -->
+<!-- String Compression -->
+Longest Common Prefix
+<!-- Reverse Words in a String -->
+Minimum Window Substring
+Remove Duplicates from a String
+<!-- Check if String is a Palindrome -->
+Edit Distance (Levenshtein Distance)
+Word Break
+Implement strStr() (Substring Search)
+Rabin-Karp Algorithm for Substring Matching
+Zigzag Conversion
+Roman to Integer
+Integer to Roman
+Valid Parentheses
+Generate Parentheses
+Find All Anagrams in a String
+Longest Repeating Character Replacement
+Repeated Substring Pattern
+KMP (Knuth-Morris-Pratt) Pattern Searching
+Wildcard Matching
+Regular Expression Matching
+Check if Two Strings are Permutations
+Find the First Non-Repeating Character in a String
+Add Binary Strings
+Multiply Strings
+String to Integer (atoi)
+One Edit Distance
+Remove Palindromic Subsequences
