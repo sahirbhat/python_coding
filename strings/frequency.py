@@ -11,7 +11,7 @@ d=dict(zip(list_str,freq))
 print(d)
 
 dict1={}
-for s in str.replace(" ",""):
+for s in str.split(" "):
     if s in dict1:
         dict1[s]+=1
     else:
