@@ -1,8 +1,9 @@
 def isomorphic_string(s: str, t: str) -> bool:
+    
     s_mapping = {}
     t_mapping = {}
 
-    # Check if lengths are different, return False if they are
+   
     if len(s) != len(t):
         return False
 
@@ -18,10 +19,9 @@ def isomorphic_string(s: str, t: str) -> bool:
        
         if char_t in t_mapping:
             if t_mapping[char_t] != char_s:
-                return False  # Mismatch in expected mapping
+                return False 
         else:
-            t_mapping[char_t] = char_s  # Create new mapping
-
+            t_mapping[char_t] = char_s  
     return True 
 
 

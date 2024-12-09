@@ -12,5 +12,5 @@ for days in weekdays:
         d[days]+=1
     else:
         d[days] =1
-print(d)         
+print(d)        
  

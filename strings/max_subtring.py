@@ -11,7 +11,7 @@ def length_of_longest_substring(s: str) -> int:
         max_len = max(max_len, end - start + 1)  # Update the max length if needed
     
     return max_len  # Return the maximum length found
-print(length_of_longest_substring("abc"))
+print(length_of_longest_substring("abccdedfc"))
 
 
 
