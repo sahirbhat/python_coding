@@ -1,16 +1,16 @@
-# import time
-# from functools import wraps
-# def mysample_decor(func):
-#     def wrapper():
-#         print(" im inside decorator")
-#         func()
-#         print(" i m inside doc but after function executio")
-#     return wrapper
-# @mysample_decor
-# def say_hello():
-#     print("hello i m simple function")
+import time
+from functools import wraps
+def mysample_decor(func):
+    def wrapper():
+        print(" im inside decorator")
+        func()
+        print(" i m inside doc but after function executio")
+    return wrapper
+@mysample_decor
+def say_hello():
+    print("hello i m simple function")
 
-# say_hello() 
+say_hello() 
 
 
     

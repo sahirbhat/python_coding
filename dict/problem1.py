@@ -24,3 +24,9 @@ def accessing_values(n,s):
 
 accessing_values('Charlie','English')
 
+for stu in students['Alice']:
+    print(stu)
+
+
+
+

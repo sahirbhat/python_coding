@@ -22,6 +22,10 @@ land_records = {
     }
 }
 
+print("___________________________________________-")
+
+print(land_records["John Doe"]["personal_details"]["parentage"])
+
 # Function to display all records
 def display_all_records():
     print("\n--- All Land Records ---")
@@ -106,20 +110,3 @@ add_land_record(
     }
 )
 
-display_all_records()
-
-# Updating payment status
-update_payment_status("Jane Smith", "Paid")
-display_all_records()
-
-# Getting owner details by mouza
-mouza_result = get_owner_by_mouza("Greenfield")
-print("\n--- Owner Details by Mouza ---")
-print(mouza_result)
-
-# Deleting a record
-delete_owner_record("John Doe")
-display_all_records()
-
-# Show revenue statistics
-show_revenue_stats()

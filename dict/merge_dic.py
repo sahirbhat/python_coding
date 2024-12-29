@@ -10,6 +10,10 @@ def merge_dic(*dicts):
 # Sample dictionaries
 dict1 = {"apple": 1, "mango": 3}
 dict2 = {"orange": 9, "banana": 8}
+dict4={"grapes":90,"ppaya":76}
+
+print("_____________________________________________")
+print(dict4.get("grapes","not found"))
 
 # # Direct merge using the | operator
 # print(dict1 | dict2)  # Output: {'apple': 1, 'mango': 3, 'orange': 9, 'banana': 8}
