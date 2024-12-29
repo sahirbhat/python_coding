@@ -35,7 +35,7 @@
 
 def sample(func):
     def wrapper():
-        print("insode function")
+        print("inside function")
         func()
         print("i m ouside")
     return wrapper
@@ -47,26 +47,25 @@ def hello():
     print(" i m hello function")
 
 
-
-
 hello()
 
 
 
-# def sample_decorator(func):
-#     def wrapper():
-#         print(" i m inside decorator function")
-#         func()
-#         # print("i m inside dec after calll function")
-#     return wrapper    
+def sample_decorator(func):
+    def wrapper():
+        print(" i m inside decorator function")
+        func()
+        # print("i m inside dec after calll function")
+    return wrapper    
 
 
 
-# @sample_decorator
-# def say_hello():
-#     print("hello i m func with decorator")
+@sample_decorator
+def say_hello():
+    print("hello i m func with decorator")
 
-# say_hello()  
+say_hello() 
+
 
 
 
