@@ -7,18 +7,19 @@ class InvoicePDF(FPDF):
         # Header with Company Name and Details
         self.set_font("Helvetica", "B", 14)
         self.set_text_color(0, 51, 102)  # Dark blue text
-        self.cell(0, 8, "zubair LEFTY SPORTS ", align="L", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(0, 8, "zubair LEFTY SPORTS", align="L", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.set_font("Helvetica", size=10)
         self.set_text_color(0, 0, 0)
-        self.cell(0, 5, "SHOPIAN  CHATTERGAM | Phone: +91 9797123473", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(0, 5, "SHOPIAN CHATTERGAM | Phone: +91 6005984113", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.cell(0, 5, "PAN: ARTPB2973K", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.ln(4)
 
         # Additional Business Info
-        self.set_font("Helvetica", size=9)
-        self.cell(0, 5, "Deals with: All Sports Iems &  Electrical Goods and Appliances", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.set_font("Helvetica", size=10)
+        self.cell(0, 5, "Deals with: All Sports Items  & ", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(0, 5, "Electrical Goods and Appliances", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.cell(0, 5, "Specializing in: LED Bulbs, Ceiling Fans, Switch Boards, Decorative Lights, Wires", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        self.cell(0, 5, "Address: SHOPIAN CHATTERGAM| Account Number: 0816020100000131", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(0, 5, "Address: SHOPIAN CHATTERGAM | Account Number: 0816020100000131", align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.ln(4)
 
         # Invoice Header
@@ -34,14 +35,13 @@ class InvoicePDF(FPDF):
     def add_customer_details(self):
         # Customer Details
         self.set_font("Helvetica", "B", 9)
-        self.set_fill_color(0, 51, 102)
-        self.set_text_color(255, 255, 255)
+        self.set_fill_color(10, 51, 102)
+        self.set_text_color(128, 220, 255)
         self.cell(95, 6, "BILL TO", fill=True)
         self.cell(95, 6, "SHIP TO", fill=True, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
         self.set_font("Helvetica", size=9)
         self.set_text_color(0, 0, 0)
-        # self.cell(95, 6, "Rayees Hassan\nBaghat Barzulla, Srinagar\, border=1)
         self.cell(95, 6, "Rayees Hassan\nKANIPORA, Phone: +91 7006265140", border=1, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.ln(4)
 
@@ -85,7 +85,7 @@ class InvoicePDF(FPDF):
             "3. Electrical goods must be installed by certified electricians to claim warranty.\n")
 
 
-# Items list adjusted to fit the page and total Rs. 224,500
+# Items list
 items = [
     ("Switch Boards", 10, 3500),
     ("Ceiling Fans", 5, 3500),
@@ -108,4 +108,6 @@ pdf.add_page()
 pdf.add_customer_details()
 pdf.add_items_table(items)
 pdf.add_terms_and_conditions()
-pdf.output("Bill_RAYES_HASSAN.pdf")
+
+# Save the PDF
+pdf.output("Invoice.pdf")

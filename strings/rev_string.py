@@ -16,3 +16,11 @@ def string_rev(s:str):
 
 
 string_rev("Hi i am Raghu")
+hell="hello i , m wonder"
+rev_string=""
+rev_string=hell[::-1]
+print(rev_string)
+
+for i in hell[::-1]:
+    print(i, end="")
+    
