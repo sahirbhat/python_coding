@@ -7,7 +7,7 @@ high=len(arr)-1
 while low < high:
     if arr[low]==0 and arr[high]!=0:
         arr[low],arr[high]=arr[high],arr[low]  
-        print(arr[low],arr[high])
+        # print(arr[low],arr[high])
 
     low+=1
     high-=1

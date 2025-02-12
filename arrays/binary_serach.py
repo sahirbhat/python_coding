@@ -1,30 +1,19 @@
-from array import *
-def binary_serach(arr,ele):
-    
-    low=0
-    high=len(arr)-1
-   
+arr = [1, 9, 7, 2, 23, 56, 67, 34, 7, 9]
+search_ele = 67
+arr = sorted(arr)  # Binary search requires a sorted array
+print(f"Sorted array: {arr}")
 
-    while low < high:
-        mid=low+high//2
-        if arr[mid]==ele:
-            return mid
-            
-        elif arr[mid]> ele:
-            high=mid-1
-        else:
-           low= mid+1  
-    return -1        
+low = 0
+high = len(arr) - 1
 
-    
-    
-
-
-
-arr=array("i",[34,56,78,90,100,109])
-ele=90
-result=binary_serach(arr,ele)
-if result!=-1:
-    print( "found")
+while low <= high:
+    mid = (low + high) // 2  # Find the middle index
+    if arr[mid] == search_ele:
+        print(f"Found element {search_ele} at index {mid}")
+        break
+    elif search_ele > arr[mid]:  # Element is in the right half
+        low = mid + 1
+    else:  # Element is in the left half
+        high = mid - 1
 else:
-    print("not found")    
+    print("Element not found")
